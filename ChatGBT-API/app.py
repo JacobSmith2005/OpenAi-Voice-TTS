@@ -1,7 +1,10 @@
 import openai
+import dotenv, os
+
+dotenv.main.load_dotenv()
 
 # Set up the OpenAI API client
-openai.api_key = "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"
+openai.api_key = os.environ['API_KEY']
 
 question = input("wuz ur question?")
 
