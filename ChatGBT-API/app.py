@@ -1,7 +1,12 @@
 import openai
+
+import dotenv, os
 import requests
+
+dotenv.main.load_dotenv()
+
 # Set up the OpenAI API client
-openai.api_key = "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"
+openai.api_key = os.environ['API_KEY']
 
 question = input("wuz ur question?")
 
@@ -20,7 +25,7 @@ url = "https://api.uberduck.ai/speak"
 
 payload = {
     "pace": 1,
-    "speech": message
+    "speech": "message"
 }
 headers = {
     "accept": "application/json",
